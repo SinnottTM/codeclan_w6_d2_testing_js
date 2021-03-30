@@ -25,6 +25,9 @@ Decorator.prototype.hasEnoughPaint = function(room) {
   
 Decorator.prototype.canPaintRoom = function(room) {
     if (this.hasEnoughPaint(room) === true) {
+        // extension
+        this.paintStock.pop()
+        // mvp continues
         room.isPainted()
     }
     

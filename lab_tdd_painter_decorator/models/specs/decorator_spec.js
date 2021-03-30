@@ -46,5 +46,13 @@ describe('Decorator', function () {
         result = decorator.canPaintRoom(room)
         assert.strictEqual(room.painted, true)
     });
+    
+    it('can remove paint', function () {
+        decorator.addCanPaint(paint1);
+        decorator.addCanPaint(paint2);
+        decorator.canPaintRoom(room)
+        result = decorator.paintStock.length
+        assert.strictEqual(result, 1)
+    });
 
 });
